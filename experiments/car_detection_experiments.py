@@ -79,5 +79,5 @@ def get_car_categories():
 load_model()
 categ_count = get_car_categories()
 
-dump(categ_count, 'car_model_cat_list.pk')
-cdsw.track_file('car_model_cat_list.pk')
+dump(categ_count, 'car_model_cat_list.pkl')
+cdsw.track_file('car_model_cat_list.pkl')
