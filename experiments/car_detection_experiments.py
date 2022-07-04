@@ -61,10 +61,10 @@ def get_predictions(preds, top=5):
 
 def get_car_categories():
     d = defaultdict(float)
-    img_list = os.listdir('data/data1a/training/01-whole/')
+    img_list = os.listdir('data/training/01-whole/')
     for i, img_path in enumerate(img_list):
         sys.stdout.write('img_path : ' + img_path)
-        image = load_img('data/data1a/training/01-whole/' + img_path, target_size=(224, 224))
+        image = load_img('data/training/01-whole/' + img_path, target_size=(224, 224))
         img = prepare_image(image, target=(224, 224))
         out = model.predict(img)
         preds = get_predictions(out,top=5)
